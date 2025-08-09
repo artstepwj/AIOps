@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025中国工业机器人市场前景预测</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/framer-motion@10.12.16/dist/framer-motion.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        secondary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                        },
+                        accent: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 1.5rem;
+        }
+        
+        .bento-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.4);
+        }
+        
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .glow-primary {
+            box-shadow: 0 0 20px 0 rgba(14, 165, 233, 0.15);
+        }
+        
+        .glow-secondary {
+            box-shadow: 0 0 20px 0 rgba(20, 184, 166, 0.15);
+        }
+        
+        .glow-accent {
+            box-shadow: 0 0 20px 0 rgba(236, 72, 153, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 1rem 0;
+        }
+        
+        .primary-gradient {
+            background-image: linear-gradient(135deg, #0ea5e9, #38bdf8);
+        }
+        
+        .secondary-gradient {
+            background-image: linear-gradient(135deg, #14b8a6, #2dd4bf);
+        }
+        
+        .accent-gradient {
+            background-image: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+        
+        .chart-bar {
+            height: 1rem;
+            border-radius: 0.5rem;
+            margin: 0.75rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .company-logo {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .trend-up {
+            color: #14b8a6;
+        }
+        
+        .trend-down {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- 标题区域 -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-slate-800">2025中国工业机器人市场前景预测</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto">全球最大工业机器人市场持续创新，国产替代加速推进</p>
+        </div>
+        
+        <!-- Bento Grid 布局 -->
+        <div class="bento-grid">
+            <!-- 市场规模卡片 -->
+            <div class="bento-card glow-primary col-span-2 row-span-1">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-800 mb-4">全球市场地位</h2>
+                        <div class="stat-number primary-gradient">50%+</div>
+                        <p class="text-slate-600">中国工业机器人安装量占全球总量</p>
+                    </div>
+                    <div class="text-primary-500 text-6xl">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 产量增长卡片 -->
+            <div class="bento-card glow-secondary">
+                <h2 class="text-xl font-bold text-slate-800 mb-4">产量预测</h2>
+                <div class="stat-number secondary-gradient">60万+</div>
+                <p class="text-slate-600">2025年工业机器人产量</p>
+                <div class="mt-4 flex items-center trend-up">
+                    <i class="fas fa-arrow-up mr-2"></i>
+                    <span>14.2% 年增长率</span>
+                </div>
+            </div>
+            
+            <!-- 销售额卡片 -->
+            <div class="bento-card glow-accent">
+                <h2 class="text-xl font-bold text-slate-800 mb-4">销售额</h2>
+                <div class="stat-number accent-gradient">900亿+</div>
+                <p class="text-slate-600">2025年预测销售额（元）</p>
+                <div class="mt-4">
+                    <div class="flex justify-between text-sm text-slate-600">
+                        <span>2024年</span>
+                        <span>842.62亿</span>
+                    </div>
+                    <div class="chart-bar bg-slate-200">
+                        <div class="h-full bg-accent-500 rounded-lg" style="width: 93%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 国产化率卡片 -->
+            <div class="bento-card glow-primary">
+                <h2 class="text-xl font-bold text-slate-800 mb-4">国产化率</h2>
+                <div class="flex items-end">
+                    <div class="stat-number primary-gradient">53.3%</div>
+                    <span class="text-slate-600 mb-6 ml-2">2025年预测</span>
+                </div>
+                <div class="mt-4">
+                    <div class="flex justify-between text-sm text-slate-600">
+                        <span>2019年</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="chart-bar bg-slate-200">
+                        <div class="h-full bg-primary-500 rounded-lg" style="width: 53%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 政策环境卡片 -->
+            <div class="bento-card col-span-2">
+                <h2 class="text-xl font-bold text-slate-800 mb-4">政策支持</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-primary-50 rounded-xl">
+                        <i class="fas fa-file-alt text-primary-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold">机器人+应用行动</h3>
+                        <p class="text-sm text-slate-600 mt-1">推动行业应用场景拓展</p>
+                    </div>
+                    <div class="p-4 bg-secondary-50 rounded-xl">
+                        <i class="fas fa-lightbulb text-secondary-500 text-2xl mb-2"></i>
+                        <h3 class="font-semibold">未来产业创新</h3>
+                        <p class="text-sm text-slate-600 mt-1">加强技术创新支持</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-slate-600">政策助力提升产业国际竞争力</p>
+            </div>
+            
+            <!-- 重点企业卡片 -->
+            <div class="bento-card col-span-2 row-span-2">
+                <h2 class="text-xl font-bold text-slate-800 mb-4">重点企业表现</h2>
+                <div class="space-y-6">
+                    <!-- 埃斯顿 -->
+                    <div class="flex items-start">
+                        <div class="company-logo bg-primary-100 text-primary-600">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-lg">埃斯顿</h3>
+                                <div class="trend-up">
+                                    <i class="fas fa-arrow-up mr-1"></i>85.71%
+                                </div>
+                            </div>
+                            <p class="text-slate-600">净利润增长 (2025Q1)</p>
+                            <div class="flex justify-between mt-2 text-sm">
+                                <span>营收: 12.44亿</span>
+                                <span>机器人业务: 75.65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 汇川技术 -->
+                    <div class="flex items-start">
+                        <div class="company-logo bg-secondary-100 text-secondary-600">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-lg">汇川技术</h3>
+                                <div class="trend-up">
+                                    <i class="fas fa-arrow-up mr-1"></i>63.13%
+                                </div>
+                            </div>
+                            <p class="text-slate-600">净利润增长 (2025Q1)</p>
+                            <div class="flex justify-between mt-2 text-sm">
+                                <span>营收: 89.78亿</span>
+                                <span>多领域布局</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 埃夫特 -->
+                    <div class="flex items-start">
+                        <div class="company-logo bg-accent-100 text-accent-600">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-lg">埃夫特</h3>
+                                <div class="trend-down">
+                                    <i class="fas fa-arrow-down mr-1"></i>24.78%
+                                </div>
+                            </div>
+                            <p class="text-slate-600">营收下降 (2025Q1)</p>
+                            <div class="flex justify-between mt-2 text-sm">
+                                <span>营收: 2.52亿</span>
+                                <span>整机业务: 59.24%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 新时达 -->
+                    <div class="flex items-start">
+                        <div class="company-logo bg-slate-100 text-slate-600">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-lg">新时达</h3>
+                                <div class="trend-up">
+                                    <i class="fas fa-arrow-up mr-1"></i>14.58%
+                                </div>
+                            </div>
+                            <p class="text-slate-600">营收增长 (2025Q1)</p>
+                            <div class="flex justify-between mt-2 text-sm">
+                                <span>营收: 7.86亿</span>
+                                <span>机器人业务: 23.88%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 库卡 -->
+                    <div class="flex items-start">
+                        <div class="company-logo bg-amber-100 text-amber-600">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="ml-4 flex-1">
+                            <h3 class="font-bold text-lg">库卡</h3>
+                            <p class="text-slate-600">全球化+区域化双轨策略</p>
+                            <div class="mt-2 text-sm">
+                                <span>汽车工业为基石，拓展新能源、医疗领域</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 技术突破卡片 -->
+            <div class="bento-card glow-secondary">
+                <div class="text-secondary-500 text-5xl mb-4">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-2">核心技术突破</h2>
+                <ul class="space-y-2 text-slate-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-2"></i>
+                        <span>协作机器人精度 ±0.02mm</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-2"></i>
+                        <span>AI视觉系统良品率 99.3%</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 应用场景卡片 -->
+            <div class="bento-card glow-primary">
+                <div class="text-primary-500 text-5xl mb-4">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-2">应用场景拓展</h2>
+                <ul class="space-y-2 text-slate-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-bolt text-amber-500 mt-1 mr-2"></i>
+                        <span>新能源电池生产线</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-heartbeat text-rose-500 mt-1 mr-2"></i>
+                        <span>医疗手术机器人</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-boxes text-emerald-500 mt-1 mr-2"></i>
+                        <span>物流分拣效率提升150%</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 智能化融合卡片 -->
+            <div class="bento-card glow-accent">
+                <div class="text-accent-500 text-5xl mb-4">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-2">智能化融合</h2>
+                <ul class="space-y-2 text-slate-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-paint-roller text-accent-500 mt-1 mr-2"></i>
+                        <span>喷涂路径优化，涂料节省40%</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-wrench text-accent-500 mt-1 mr-2"></i>
+                        <span>5G+AR远程调试，故障排除时间减少90%</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 行业前景卡片 -->
+            <div class="bento-card col-span-2 bg-gradient-to-br from-primary-50 to-secondary-50">
+                <h2 class="text-2xl font-bold text-slate-800 mb-4">未来发展趋势</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="text-center p-4">
+                        <div class="text-primary-500 text-4xl mb-3">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3 class="font-semibold">核心部件自主化</h3>
+                        <p class="text-sm text-slate-600 mt-2">高精度减速器、智能控制系统</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-secondary-500 text-4xl mb-3">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="font-semibold">全球化服务网络</h3>
+                        <p class="text-sm text-slate-600 mt-2">构建全球服务体系</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-accent-500 text-4xl mb-3">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3 class="font-semibold">跨行业技术融合</h3>
+                        <p class="text-sm text-slate-600 mt-2">AI大模型深度融合</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

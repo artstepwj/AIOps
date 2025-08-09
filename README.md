@@ -6,7 +6,7 @@
 
 ## 在线访问
 
-通过GitHub Pages访问：[点击这里查看报告](https://你的用户名.github.io/你的仓库名/)
+通过GitHub Pages访问：[点击这里查看报告](https://artstepwj.github.io/AIOps/)
 
 ## 项目内容
 
