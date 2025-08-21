@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>能源与算力融合发展前景</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 759px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .energy-card {
+            border-left-color: #3b82f6;
+        }
+        
+        .computing-card {
+            border-left-color: #10b981;
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[759px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-4xl font-bold mb-2">能源与算力融合发展前景</h1>
+<div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<!-- Main Content -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Energy Storage -->
+<div class="col-span-6">
+<div class="bg-white bg-opacity-80 rounded-lg p-6 shadow-sm h-full">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+<i class="fas fa-battery-three-quarters text-2xl text-blue-500"></i>
+</div>
+<h2 class="text-2xl font-semibold text-blue-600">储能技术的节能经济效益</h2>
+</div>
+<div class="space-y-4 mt-6">
+<div class="feature-card energy-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">显著的节能效益</h3>
+<p class="text-gray-600">储能技术在园区和商业建筑中展现出显著的节能效果，有效降低运营成本</p>
+</div>
+</div>
+</div>
+<div class="feature-card energy-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">经济效益提升</h3>
+<p class="text-gray-600">通过智能能源管理，提高负荷利用率，降低园区运营成本</p>
+</div>
+</div>
+</div>
+<div class="feature-card energy-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">集团战略支持</h3>
+<p class="text-gray-600">四川能源发展集团战略目标为"源网荷储一体、水风光氢天然气（页岩气）等多能互补的国内领先、世界一流新型能源企业"</p>
+</div>
+</div>
+</div>
+<div class="feature-card energy-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">示范项目价值</h3>
+<p class="text-gray-600">在园区内建设储能示范项目，不仅是业务拓展，更是对母集团核心战略的积极响应和实践</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Edge Computing -->
+<div class="col-span-6">
+<div class="bg-white bg-opacity-80 rounded-lg p-6 shadow-sm h-full">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+<i class="fas fa-microchip text-2xl text-green-500"></i>
+</div>
+<h2 class="text-2xl font-semibold text-green-600">边缘计算技术发展趋势</h2>
+</div>
+<div class="space-y-4 mt-6">
+<div class="feature-card computing-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">政策鼓励与支持</h3>
+<p class="text-gray-600">国家鼓励在靠近用户侧、网络边缘侧建设单体规模较小、存算一体的边缘计算中心，支持实时性要求高、极低时延的业务需求</p>
+</div>
+</div>
+</div>
+<div class="feature-card computing-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">技术价值与应用</h3>
+<p class="text-gray-600">边缘计算可为人工智能应用提供本地算力支撑，满足企业对高性能计算的需求，实现实时数据采集、分析、控制和调度</p>
+</div>
+</div>
+</div>
+<div class="feature-card computing-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">园区升级价值</h3>
+<p class="text-gray-600">通过将储能与边缘计算相结合，园区将从单纯的物理空间租赁模式，升级为具备高附加值能源和算力服务能力的创新载体</p>
+</div>
+</div>
+</div>
+<div class="feature-card computing-card pl-4 py-2">
+<div class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<div>
+<h3 class="font-medium">战略转型机遇</h3>
+<p class="text-gray-600">为能投光电孵化出新的业务模式和能力，使其能够将园区内的成功经验和技术积累，对外输出到更广阔的市场，实现从"运营载体"到"服务提供商"的战略转型</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">6/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

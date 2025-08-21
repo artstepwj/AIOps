@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>智慧工地安全管理系统</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-4xl font-bold mb-2">智慧工地安全管理系统</h1>
+<div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<!-- System Overview -->
+<div class="mb-8">
+<p class="text-lg">
+                    以人工智能为核心的工地安全管理系统，解决企业负责人和施工单位对工地安全的关注和顾虑，实现对施工现场的动态监控与风险预警。
+                </p>
+</div>
+<!-- System Features -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<!-- Feature 1 -->
+<div class="col-span-4 feature-card bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="flex mb-4">
+<div class="icon-container bg-blue-100 text-blue-500 mr-4">
+<i class="fas fa-eye text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold">全景监控</h3>
+</div>
+<p class="text-gray-600">
+                        通过线上安全工地全景看板系统，实时监控施工场地安全状况，自动识别分析安全隐患。
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="col-span-4 feature-card bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="flex mb-4">
+<div class="icon-container bg-green-100 text-green-500 mr-4">
+<i class="fas fa-database text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold">多模态数据库</h3>
+</div>
+<p class="text-gray-600">
+                        后端多模态数据库自动汇总分析现场上传的图片、视频等多模态数据，实现初步智能化安全监控。
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="col-span-4 feature-card bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="flex mb-4">
+<div class="icon-container bg-purple-100 text-purple-500 mr-4">
+<i class="fas fa-shield-alt text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold">智能预警</h3>
+</div>
+<p class="text-gray-600">
+                        系统能够自动识别分析并汇总到看板系统中，实现对安全隐患的及时发现和预警，提高施工安全性。
+                    </p>
+</div>
+</div>
+<!-- Implementation Approach -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column -->
+<div class="col-span-6">
+<div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold mb-4 flex items-center">
+<i class="fas fa-cogs text-blue-500 mr-3"></i>
+                            实施路径
+                        </h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span>电子科大科技园人工智能概念验证中心负责系统研发与概念验证</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span>能投光电提供需求与应用场景，提供内部试点工地</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span>系统将首先在能投建工集团内部试点应用，积累经验后向外部推广</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column -->
+<div class="col-span-6">
+<div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+<h3 class="text-xl font-semibold mb-4 flex items-center">
+<i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                            价值与意义
+                        </h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-star text-blue-500 mt-1 mr-3"></i>
+<span>提升工地安全管理的科技含量，降低安全事故率</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-star text-blue-500 mt-1 mr-3"></i>
+<span>通过知识产权形成（专利或软件著作权），保护核心技术成果</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-star text-blue-500 mt-1 mr-3"></i>
+<span>打造能投光电在智慧工地领域的专业形象，拓展业务增长点</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-star text-blue-500 mt-1 mr-3"></i>
+<span>为后续向外部市场推广提供可复制的成功案例和经验</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">15/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>目录</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .toc-item {
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-10">
+<h1 class="text-4xl font-bold mb-2">目录</h1>
+<div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<!-- Table of Contents -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column -->
+<div class="col-span-6">
+<!-- Section 1 -->
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="section-icon bg-blue-100 text-blue-500 mr-3">
+<i class="fas fa-chart-line text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">一、合作背景</h2>
+</div>
+<ul class="pl-14 space-y-3">
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-blue-500 mr-2"></i>
+<span>数字经济与智慧产业发展新机遇</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-blue-500 mr-2"></i>
+<span>国家及地方政策导向</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-blue-500 mr-2"></i>
+<span>建筑行业与园区智能化转型趋势</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-blue-500 mr-2"></i>
+<span>能源与算力融合发展前景</span>
+</li>
+</ul>
+</div>
+<!-- Section 2 -->
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="section-icon bg-green-100 text-green-500 mr-3">
+<i class="fas fa-users text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">二、合作主体</h2>
+</div>
+<ul class="pl-14 space-y-3">
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-green-500 mr-2"></i>
+<span>四川能投智慧光电有限公司</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-green-500 mr-2"></i>
+<span>电子科大科技园人工智能概念验证中心</span>
+</li>
+</ul>
+</div>
+<!-- Section 3 -->
+<div>
+<div class="flex items-center mb-4">
+<div class="section-icon bg-purple-100 text-purple-500 mr-3">
+<i class="fas fa-lightbulb text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">三、合作内容</h2>
+</div>
+<ul class="pl-14 space-y-3">
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-purple-500 mr-2"></i>
+<span>构建智慧产业生态</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-purple-500 mr-2"></i>
+<span>高品质科创空间联合运营</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-purple-500 mr-2"></i>
+<span>智慧工地安全管理系统</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column -->
+<div class="col-span-6">
+<!-- Section 4 -->
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="section-icon bg-orange-100 text-orange-500 mr-3">
+<i class="fas fa-handshake text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">四、合作模式与运营策略</h2>
+</div>
+<ul class="pl-14 space-y-3">
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-orange-500 mr-2"></i>
+<span>职责分工与资源投入</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-orange-500 mr-2"></i>
+<span>联合运营机制与沟通协调</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-orange-500 mr-2"></i>
+<span>收益分配原则</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-orange-500 mr-2"></i>
+<span>政策支持与资金争取</span>
+</li>
+</ul>
+</div>
+<!-- Section 5 -->
+<div class="mb-8">
+<div class="flex items-center mb-4">
+<div class="section-icon bg-red-100 text-red-500 mr-3">
+<i class="fas fa-rocket text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">五、合作价值与远期展望</h2>
+</div>
+<ul class="pl-14 space-y-3">
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-red-500 mr-2"></i>
+<span>短期商业价值</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-red-500 mr-2"></i>
+<span>园区核心平台功能与价值</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-red-500 mr-2"></i>
+<span>长期战略价值</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-red-500 mr-2"></i>
+<span>智慧工地系统迭代路线图</span>
+</li>
+<li class="toc-item flex items-center">
+<i class="fas fa-angle-right text-red-500 mr-2"></i>
+<span>未来深化合作展望</span>
+</li>
+</ul>
+</div>
+<!-- Section 6 -->
+<div>
+<div class="flex items-center">
+<div class="section-icon bg-gray-100 text-gray-500 mr-3">
+<i class="fas fa-check-circle text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold">六、谢谢</h2>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">2/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

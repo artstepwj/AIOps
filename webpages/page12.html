@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>平台搭建与功能规划</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 777px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .platform-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[777px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-4xl font-bold mb-2">平台搭建与功能规划</h1>
+<div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<p class="text-lg mb-8">围绕"智慧建筑/智慧工地"主题，双方将在园区内共同打造以下四大核心平台：</p>
+<!-- Platforms Grid -->
+<div class="grid grid-cols-2 gap-8">
+<!-- Platform 1 -->
+<div class="platform-card rounded-xl p-6 flex">
+<div class="mr-4">
+<div class="icon-container bg-blue-100">
+<i class="fas fa-server text-3xl text-blue-500"></i>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 text-blue-600">国家级科技企业服务器</h3>
+<p class="text-gray-600 mb-3">提供高性能计算和数据存储服务，满足高科技企业在人工智能、大数据分析等方面的研发需求。</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="fas fa-check-circle text-blue-500 mr-2"></i>
+<span>降低IT基础设施成本，加速研发与数据处理，保障数据安全</span>
+</div>
+</div>
+</div>
+<!-- Platform 2 -->
+<div class="platform-card rounded-xl p-6 flex">
+<div class="mr-4">
+<div class="icon-container bg-green-100">
+<i class="fas fa-seedling text-3xl text-green-500"></i>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 text-green-600">国家级中小企业创业基地</h3>
+<p class="text-gray-600 mb-3">为初创和成长型科技企业提供孵化、培育和政策辅导，降低其运营成本，助力其快速发展。</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="fas fa-check-circle text-green-500 mr-2"></i>
+<span>获得全方位创业支持，降低运营风险，加速企业成长</span>
+</div>
+</div>
+</div>
+<!-- Platform 3 -->
+<div class="platform-card rounded-xl p-6 flex">
+<div class="mr-4">
+<div class="icon-container bg-purple-100">
+<i class="fas fa-brain text-3xl text-purple-500"></i>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 text-purple-600">人工智能概念验证中心</h3>
+<p class="text-gray-600 mb-3">由电子科大概验中心主导，为入驻企业提供人工智能技术验证、原型开发及应用场景落地服务，加速人工智能成果转化。</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="fas fa-check-circle text-purple-500 mr-2"></i>
+<span>快速验证AI想法，降低AI部署试错成本，提升员工AI技能</span>
+</div>
+</div>
+</div>
+<!-- Platform 4 -->
+<div class="platform-card rounded-xl p-6 flex">
+<div class="mr-4">
+<div class="icon-container bg-orange-100">
+<i class="fas fa-hard-hat text-3xl text-orange-500"></i>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 text-orange-600">智慧工地产品中试基地</h3>
+<p class="text-gray-600 mb-3">吸引智慧工地领域的软硬件企业入驻，提供产品测试、中试环境和技术支持，加速产品成熟和市场化。</p>
+<div class="flex items-center text-sm text-gray-500">
+<i class="fas fa-check-circle text-orange-500 mr-2"></i>
+<span>提供专业中试环境，加速产品成熟与市场化，对接潜在客户</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Note -->
+<div class="mt-8 bg-white bg-opacity-70 p-4 rounded-lg border border-gray-200">
+<p class="text-gray-700">
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                    通过搭建上述专业化平台，园区将提供超越物理空间的独特增值服务和生态优势，例如人工智能技术支持、中试环境、行业上下游资源整合。这将大大提升园区对目标企业的吸引力，使其不仅仅是租赁空间，更是创新和产业协作的平台，从而提高入驻企业的"黏性"，并为能投光电带来更高价值的服务收入，弥补租金的不足。
+                </p>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">12/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>系统1.0版本开发与知识产权形成</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .process-arrow {
+            position: relative;
+        }
+        
+        .process-arrow:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(to right, #3b82f6, #10b981);
+            transform: translateY(-50%);
+        }
+        
+        .process-arrow:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #10b981;
+            border-right: 2px solid #10b981;
+            transform: translateY(-50%) rotate(45deg);
+            margin-right: -5px;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-4xl font-bold mb-2">系统1.0版本开发与知识产权形成</h1>
+<div class="min-h-[3px] w-[120px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<!-- Main Content -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column - Development Process -->
+<div class="col-span-7">
+<h2 class="text-2xl font-semibold mb-4 flex items-center">
+<i class="fas fa-code text-[#3b82f6] mr-3"></i>
+                        系统1.0版本开发流程
+                    </h2>
+<!-- Development Process Flow -->
+<div class="bg-white bg-opacity-80 rounded-lg p-6 shadow-sm">
+<div class="flex justify-between items-center mb-8 relative">
+<div class="w-[22%] bg-blue-50 p-4 rounded-lg text-center relative process-arrow">
+<div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
+<i class="fas fa-1"></i>
+</div>
+<h3 class="font-medium mb-2">需求分析</h3>
+<p class="text-sm text-gray-600">安全工地全景看板系统</p>
+</div>
+<div class="w-[22%] bg-blue-50 p-4 rounded-lg text-center relative process-arrow">
+<div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
+<i class="fas fa-2"></i>
+</div>
+<h3 class="font-medium mb-2">系统设计</h3>
+<p class="text-sm text-gray-600">多模态数据库架构</p>
+</div>
+<div class="w-[22%] bg-blue-50 p-4 rounded-lg text-center relative process-arrow">
+<div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
+<i class="fas fa-3"></i>
+</div>
+<h3 class="font-medium mb-2">功能开发</h3>
+<p class="text-sm text-gray-600">AI自动识别分析</p>
+</div>
+<div class="w-[22%] bg-blue-50 p-4 rounded-lg text-center">
+<div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
+<i class="fas fa-4"></i>
+</div>
+<h3 class="font-medium mb-2">测试验证</h3>
+<p class="text-sm text-gray-600">系统集成与测试</p>
+</div>
+</div>
+<!-- System Features -->
+<div class="grid grid-cols-2 gap-4">
+<div class="feature-card bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+<div class="flex items-start">
+<i class="fas fa-dashboard text-blue-500 mt-1 mr-3 text-xl"></i>
+<div>
+<h3 class="font-medium mb-1">安全工地全景看板</h3>
+<p class="text-sm text-gray-600">实时监控与风险预警</p>
+</div>
+</div>
+</div>
+<div class="feature-card bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+<div class="flex items-start">
+<i class="fas fa-database text-green-500 mt-1 mr-3 text-xl"></i>
+<div>
+<h3 class="font-medium mb-1">多模态数据库</h3>
+<p class="text-sm text-gray-600">图片、视频自动分析</p>
+</div>
+</div>
+</div>
+<div class="feature-card bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+<div class="flex items-start">
+<i class="fas fa-brain text-purple-500 mt-1 mr-3 text-xl"></i>
+<div>
+<h3 class="font-medium mb-1">AI自动识别分析</h3>
+<p class="text-sm text-gray-600">自动汇总到看板系统</p>
+</div>
+</div>
+</div>
+<div class="feature-card bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+<div class="flex items-start">
+<i class="fas fa-shield-alt text-orange-500 mt-1 mr-3 text-xl"></i>
+<div>
+<h3 class="font-medium mb-1">初步智能化安全监控</h3>
+<p class="text-sm text-gray-600">提升工地安全管理</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column - IP Formation -->
+<div class="col-span-5">
+<h2 class="text-2xl font-semibold mb-4 flex items-center">
+<i class="fas fa-lightbulb text-[#10b981] mr-3"></i>
+                        知识产权形成
+                    </h2>
+<!-- IP Formation Process -->
+<div class="bg-white bg-opacity-80 rounded-lg p-6 shadow-sm mb-6">
+<div class="flex flex-col space-y-4">
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+<i class="fas fa-file-signature text-green-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-medium">专利申请</h3>
+<p class="text-sm text-gray-600">智慧工地安全管理系统</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+<i class="fas fa-copyright text-blue-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-medium">软件著作权</h3>
+<p class="text-sm text-gray-600">系统源代码保护</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+<i class="fas fa-trademark text-purple-600 text-xl"></i>
+</div>
+<div>
+<h3 class="font-medium">商标注册</h3>
+<p class="text-sm text-gray-600">系统品牌保护</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits -->
+<div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-5 shadow-sm">
+<h3 class="font-medium mb-3 flex items-center">
+<i class="fas fa-star text-yellow-500 mr-2"></i>
+                            系统价值与知识产权成果
+                        </h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+<span class="text-sm">提升能投建工集团工地安全管理科技含量</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+<span class="text-sm">为能投光电拓展新的业务增长点</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+<span class="text-sm">通过小额投入解决安全管理痛点</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+<span class="text-sm">为后续系统优化迭代奠定基础</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">16/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

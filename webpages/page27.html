@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风险评估与应对措施</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            width: 1280px;
+            min-height: 720px;
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-shape-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .gradient-shape-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .grid-lines {
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .risk-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #e53e3e;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .risk-card:hover {
+            transform: translateY(-3px);
+        }
+        .risk-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .risk-level {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .risk-high {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        .risk-medium {
+            background: #feebc8;
+            color: #dd6b20;
+        }
+        .risk-low {
+            background: #c6f6d5;
+            color: #38a169;
+        }
+        .risk-desc {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .mitigation {
+            background: #e6fffa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #38b2ac;
+        }
+        .mitigation-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mitigation-desc {
+            font-size: 13px;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+        .risk-matrix {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        .matrix-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .matrix-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .matrix-category {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .matrix-score {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .matrix-label {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        .page-footer {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #718096;
+            font-weight: 500;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1280px) {
+            body {
+                padding: 0 20px;
+            }
+            .content-area {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
+            .content-area {
+                padding: 20px 10px;
+            }
+            .grid-cols-12 {
+                grid-template-columns: 1fr;
+            }
+            .col-span-6 {
+                grid-column: span 1;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .risk-card {
+                margin-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="grid-lines">
+    <!-- Decorative Elements -->
+    <div class="gradient-shape-1"></div>
+    <div class="gradient-shape-2"></div>
+    
+    <!-- Content Container -->
+    <div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold mb-2">风险评估与应对措施</h1>
+            <div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+        </div>
+            
+        <!-- Main Content -->
+        <div class="grid grid-cols-2 gap-6 mb-6">
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-cogs text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">技术风险</h3>
+                    </div>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">中等</span>
+                </div>
+                <p class="text-gray-600 mb-4">新技术集成复杂度高，可能存在技术兼容性问题和系统稳定性风险</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-shield-alt text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">应对措施</span>
+                    </div>
+                    <p class="text-sm text-gray-700">建立技术专家团队，制定详细测试方案，分阶段实施技术验证</p>
+                </div>
+            </div>
+                
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-chart-line text-orange-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">市场风险</h3>
+                    </div>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">中等</span>
+                </div>
+                <p class="text-gray-600 mb-4">市场需求变化、竞争加剧可能影响项目商业化进程和盈利能力</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-shield-alt text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">应对措施</span>
+                    </div>
+                    <p class="text-sm text-gray-700">深入市场调研，建立灵活的商业模式，加强品牌建设和客户关系维护</p>
+                </div>
+            </div>
+                
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-gavel text-blue-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">政策风险</h3>
+                    </div>
+                    <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm font-medium">较低</span>
+                </div>
+                <p class="text-gray-600 mb-4">政策变化可能影响项目支持力度和发展环境</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-shield-alt text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">应对措施</span>
+                    </div>
+                    <p class="text-sm text-gray-700">密切关注政策动向，建立政府沟通机制，确保项目符合政策导向</p>
+                </div>
+            </div>
+                
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-dollar-sign text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">财务风险</h3>
+                    </div>
+                    <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm font-medium">较高</span>
+                </div>
+                <p class="text-gray-600 mb-4">项目投资规模大，资金需求量大，存在资金链断裂风险</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-shield-alt text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">应对措施</span>
+                    </div>
+                    <p class="text-sm text-gray-700">多元化融资渠道，建立资金监控机制，制定应急资金预案</p>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Risk Assessment Matrix -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-chart-bar text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold">综合风险评估矩阵</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-lg font-medium mb-2">整体风险等级</div>
+                    <div class="text-3xl font-bold mb-1">中等</div>
+                    <div class="text-sm opacity-90">可控范围内</div>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-lg font-medium mb-2">风险控制能力</div>
+                    <div class="text-3xl font-bold mb-1">强</div>
+                    <div class="text-sm opacity-90">应对措施完善</div>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-lg font-medium mb-2">项目成功概率</div>
+                    <div class="text-3xl font-bold mb-1">85%</div>
+                    <div class="text-sm opacity-90">预期良好</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page Footer -->
+    <div class="absolute bottom-6 right-8 text-gray-500 font-medium">27 / 30</div>
+</body>
+</html>

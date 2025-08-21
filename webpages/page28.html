@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实施时间表与里程碑</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            width: 1280px;
+            min-height: 720px;
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-shape-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .gradient-shape-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .grid-lines {
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .timeline-container {
+            position: relative;
+            margin: 30px 0;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .timeline-content {
+            width: 45%;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 10%;
+            border-left: 5px solid #667eea;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 10%;
+            border-right: 5px solid #764ba2;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border: 4px solid white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .phase-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .phase-duration {
+            font-size: 14px;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .phase-desc {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .milestones {
+            background: #e6fffa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #38b2ac;
+        }
+        .milestone-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .milestone-list {
+            font-size: 13px;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+        .milestone-list li {
+            margin-bottom: 5px;
+        }
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .summary-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .page-footer {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #718096;
+            font-weight: 500;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1280px) {
+            body {
+                padding: 0 20px;
+            }
+            .content-area {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
+            .content-area {
+                padding: 20px 10px;
+            }
+            .page-title {
+                font-size: 2rem;
+            }
+            .timeline-container {
+                padding: 0 10px;
+            }
+            .timeline-item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="grid-lines">
+    <!-- Decorative Elements -->
+    <div class="gradient-shape-1"></div>
+    <div class="gradient-shape-2"></div>
+    
+    <!-- Content Container -->
+    <div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold mb-2">实施时间表与里程碑</h1>
+            <div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+        </div>
+            
+        <!-- Timeline Content -->
+        <div class="space-y-6 mb-8">
+            <!-- Phase 1 -->
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-rocket text-blue-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">第一阶段：项目启动</h3>
+                        <p class="text-blue-600 font-medium">2025年1月 - 2025年6月</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">完成项目立项、团队组建、基础设施建设和初步技术验证</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-flag-checkered text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">关键里程碑</span>
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• 签署合作协议（1月）</li>
+                        <li>• 完成场地选址和规划（3月）</li>
+                        <li>• 核心团队到位（4月）</li>
+                        <li>• 基础设施建设启动（6月）</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <!-- Phase 2 -->
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-cogs text-green-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">第二阶段：平台建设</h3>
+                        <p class="text-green-600 font-medium">2025年7月 - 2025年12月</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">建设核心技术平台，开发智慧建筑系统，完成初步产品验证</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-flag-checkered text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">关键里程碑</span>
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• 技术平台搭建完成（9月）</li>
+                        <li>• 首个示范项目启动（10月）</li>
+                        <li>• 产品原型开发完成（12月）</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <!-- Phase 3 -->
+            <div class="bg-white bg-opacity-80 p-6 rounded-lg shadow-sm border border-gray-100">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-chart-line text-purple-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">第三阶段：市场推广</h3>
+                        <p class="text-purple-600 font-medium">2026年1月 - 2026年12月</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">产品商业化推广，扩大市场份额，建立产业生态合作网络</p>
+                <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-flag-checkered text-teal-500 mr-2"></i>
+                        <span class="font-medium text-teal-700">关键里程碑</span>
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• 产品正式发布（3月）</li>
+                        <li>• 首批客户签约（6月）</li>
+                        <li>• 实现盈亏平衡（12月）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Project Overview -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-calendar-alt text-2xl mr-3"></i>
+                <h2 class="text-2xl font-semibold">项目实施概览</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold mb-1">24</div>
+                    <div class="text-sm opacity-90">个月总周期</div>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold mb-1">12</div>
+                    <div class="text-sm opacity-90">个关键里程碑</div>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg text-center">
+                    <div class="text-3xl font-bold mb-1">3</div>
+                    <div class="text-sm opacity-90">个实施阶段</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page Footer -->
+    <div class="absolute bottom-6 right-8 text-gray-500 font-medium">28 / 30</div>
+</div>
+</body>
+</html>

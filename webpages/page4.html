@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>国家及地方政策导向</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://picture-search.tiangong.cn/tailwindcss.com"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {width: 1280px; min-height: 720px; clip-path: inset(0 0 0 0); font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            color: #1f2937;}
+        
+        .gradient-shape-1 {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+        
+        .gradient-shape-2 {
+            background: linear-gradient(225deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+        
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .policy-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .policy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .policy-card.national {
+            border-left-color: #3b82f6;
+        }
+        
+        .policy-card.provincial {
+            border-left-color: #10b981;
+        }
+        
+        .policy-card.local {
+            border-left-color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+<div class="relative w-[1280px] h-[720px] bg-[#f5f5f5] grid-lines">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[500px] min-h-[500px] gradient-shape-1 rounded-bl-[300px] -z-0"></div>
+<div class="absolute bottom-0 left-0 w-[400px] min-h-[400px] gradient-shape-2 rounded-tr-[250px] -z-0"></div>
+<!-- Content Container -->
+<div class="absolute inset-0 flex flex-col px-24 py-16 z-10">
+<!-- Header -->
+<div class="mb-8">
+<h1 class="text-4xl font-bold mb-2">国家及地方政策导向</h1>
+<div class="min-h-[3px] w-[80px] bg-gradient-to-r from-[#3b82f6] to-[#10b981]"></div>
+</div>
+<!-- Main Content -->
+<div class="grid grid-cols-12 gap-6">
+<!-- National Policy Column -->
+<div class="col-span-4">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+<i class="fas fa-landmark text-blue-500 text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold text-blue-600">国家政策导向</h2>
+</div>
+<div class="space-y-4">
+<div class="policy-card national bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-chart-line text-blue-500 mr-2"></i>
+<h3 class="font-medium">数字经济战略定位</h3>
+</div>
+<p class="text-sm text-gray-600">数字经济提升至国家战略层面，强调释放数据要素价值、强化数字基础设施建设、提升数字经济核心竞争力</p>
+</div>
+<div class="policy-card national bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-robot text-blue-500 mr-2"></i>
+<h3 class="font-medium">"人工智能+"行动计划</h3>
+</div>
+<p class="text-sm text-gray-600">《2025年数字经济发展工作要点》中部署"人工智能+"等重大行动，培育数字领域新质生产力</p>
+</div>
+<div class="policy-card national bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-city text-blue-500 mr-2"></i>
+<h3 class="font-medium">智慧城市建设</h3>
+</div>
+<p class="text-sm text-gray-600">推动数字经济与实体经济深度融合，建设智慧城市，提升城市运行效率和居民生活质量</p>
+</div>
+</div>
+</div>
+<!-- Sichuan Province Policy Column -->
+<div class="col-span-4">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+<i class="fas fa-map-marked-alt text-green-500 text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold text-green-600">四川省政策重点</h2>
+</div>
+<div class="space-y-4">
+<div class="policy-card provincial bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-file-alt text-green-500 mr-2"></i>
+<h3 class="font-medium">人工智能产业链工作方案</h3>
+</div>
+<p class="text-sm text-gray-600">《四川省人工智能产业链总体工作方案（2024—2027年）》，明确提出到2027年人工智能产业规模将突破2000亿元</p>
+</div>
+<div class="policy-card provincial bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-cogs text-green-500 mr-2"></i>
+<h3 class="font-medium">25条具体政策支持</h3>
+</div>
+<p class="text-sm text-gray-600">涵盖技术攻关、产业发展、终端应用、算力数据供给及要素保障体系建设等多个方面</p>
+</div>
+<div class="policy-card provincial bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-hand-holding-usd text-green-500 mr-2"></i>
+<h3 class="font-medium">政策红利</h3>
+</div>
+<p class="text-sm text-gray-600">争取超长期特别国债、省级重大科技专项支持、分担中试费用以及主动开放应用场景等政策红利</p>
+</div>
+</div>
+</div>
+<!-- Chengdu City Policy Column -->
+<div class="col-span-4">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+<i class="fas fa-building text-yellow-500 text-xl"></i>
+</div>
+<h2 class="text-2xl font-semibold text-yellow-600">成都市政策规划</h2>
+</div>
+<div class="space-y-4">
+<div class="policy-card local bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-network-wired text-yellow-500 mr-2"></i>
+<h3 class="font-medium">智慧蓉城建设规划</h3>
+</div>
+<p class="text-sm text-gray-600">到2025年，成都市将基本实现数字基础设施集约共享、智慧蓉城运行中枢高效运转</p>
+</div>
+<div class="policy-card local bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-brain text-yellow-500 mr-2"></i>
+<h3 class="font-medium">AI驱动的智能应用</h3>
+</div>
+<p class="text-sm text-gray-600">鼓励发展基于人工智能的智能分析、调度、监管和辅助决策，促进新型产城融合发展</p>
+</div>
+<div class="policy-card local bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center mb-2">
+<i class="fas fa-digital-tachograph text-yellow-500 mr-2"></i>
+<h3 class="font-medium">数字化转型目标</h3>
+</div>
+<p class="text-sm text-gray-600">推动数字经济与智慧蓉城建设深度融合发展，构建城市运行和治理智能中枢</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Summary -->
+<div class="mt-8">
+<div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
+<div class="flex items-start">
+<i class="fas fa-lightbulb text-[#3b82f6] mt-1 mr-3"></i>
+<p class="text-sm">国家和四川省对数字经济、人工智能和智慧城市建设的强力推动，不仅提供了市场机遇，更明确了国有企业转型的方向和路径。这种自上而下的政策支持，将为能投光电的内部决策提供强大的合法性和资源倾斜，降低转型阻力，确保项目在立项、审批和资源配置上获得优先权。</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-500">四川能投智慧光电有限公司智慧产业生态合作方案</div>
+<div class="text-sm text-gray-500">4/30</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
