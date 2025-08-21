@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+  <meta name="google-site-verification" content="cXNc33WOKwtKtM8mhUUaEoHcEyBumWXIlT57IV98nC0" >
+  <link rel="icon" href="https://static.tiangong.cn/prod-skywork-web-bundle/favicon.ico" >
+
+  <title>AI办公智能体先行者</title>
+  <meta name="keywords"
+    content="天工,Skywork,智能体,Agent,AI,办公,Office,微软,Microsoft,WPS,Word,Excel,PPT,文档,幻灯片,演示文稿,网页,html,研究报告,deep research,AI视频,AI音乐,AI写歌,AI绘本,MCP,A2A" >
+  <meta name="description" content="天工Skywork是一款具备超强DeepResearch能力的全新AI Office智能体，通过3个专家agent和1个通用agent，让AI深度研究，一键生成AI文档、AI PPT、AI表格，高效应对各类办公、学习场景；也支持网页html、图像、视频、有声书、绘本等多种形式的创意内容创作，激发无限灵感。
+天工Skywork融合先进的多模态理解与深度检索分析技术，一问即得科研级、专业级、咨询级的高质量结果，帮助你摆脱繁琐事务，显著提升效率。
+无论你是职场白领、科研人员、大学生、研究生，还是自媒体KOL，天工Skywork都将是你值得信赖的智能伙伴，助你专注思考、释放创造力。" >
+
+  <meta name="og:title" content="天工（Skywork）超级智能体 - 文档PPT表格网页深度生成" >
+  <meta name="og:description" content="天工Skywork是一款具备超强DeepResearch能力的全新AI Office智能体，通过3个专家agent和1个通用agent，让AI深度研究，一键生成AI文档、AI PPT、AI表格，高效应对各类办公、学习场景；也支持网页html、图像、视频、有声书、绘本等多种形式的创意内容创作，激发无限灵感。
+天工Skywork融合先进的多模态理解与深度检索分析技术，一问即得科研级、专业级、咨询级的高质量结果，帮助你摆脱繁琐事务，显著提升效率。
+无论你是职场白领、科研人员、大学生、研究生，还是自媒体KOL，天工Skywork都将是你值得信赖的智能伙伴，助你专注思考、释放创造力。" >
+  <meta name="og:type" content="website" >
+  <meta name="og:image"
+    content="https://static.tiangong.cn/fe/skywork-site-assets/images/share/logo-skywork-china.png" >
+  <meta name="og:url" content="https://www.tiangong.cn" >
+  <meta name="og:site_name" content="Tiangong.cn" >
+
+  <meta name="twitter:title" content="天工（Skywork）超级智能体 - 文档PPT表格网页深度生成" >
+  <meta name="twitter:description" content="天工Skywork是一款具备超强DeepResearch能力的全新AI Office智能体，通过3个专家agent和1个通用agent，让AI深度研究，一键生成AI文档、AI PPT、AI表格，高效应对各类办公、学习场景；也支持网页html、图像、视频、有声书、绘本等多种形式的创意内容创作，激发无限灵感。
+天工Skywork融合先进的多模态理解与深度检索分析技术，一问即得科研级、专业级、咨询级的高质量结果，帮助你摆脱繁琐事务，显著提升效率。
+无论你是职场白领、科研人员、大学生、研究生，还是自媒体KOL，天工Skywork都将是你值得信赖的智能伙伴，助你专注思考、释放创造力。" >
+  <meta name="twitter:card" content="summary_large_image" >
+  <meta name="twitter:image"
+    content="https://static.tiangong.cn/fe/skywork-site-assets/images/share/logo-skywork-china.png" >
+  <meta name="twitter:url" content="https://www.tiangong.cn/" >
+  <meta name="twitter:site" content="@Tiangong_cn" >
+
+  
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-ExtraBold.woff2"
+    type="font/woff2" crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Bold.woff2" type="font/woff2"
+    crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Black.woff2" type="font/woff2"
+    crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-SemiBold.woff2"
+    type="font/woff2" crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Light.woff2" type="font/woff2"
+    crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Medium.woff2" type="font/woff2"
+    crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-ExtraLight.woff2"
+    type="font/woff2" crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Regular.woff2"
+    type="font/woff2" crossorigin="anonymous" >
+  <link rel="preload" as="font"
+    href="https://static.tiangong.cn/fe/skywork-site-assets/fonts/Outfit_20250710/Outfit-Thin.woff2" type="font/woff2"
+    crossorigin="anonymous" >
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEFE7MXDCE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-WEFE7MXDCE");
+    window.gtag = gtag
+  </script>
+  <style>
+    #loadingBox {
+      width: 100vw;
+      height: 100vh;
+      display: -webkit-box;
+      display: flex;
+      position: fixed;
+      left: 0;
+      top: 0;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      z-index: -1;
+    }
+
+    @media (min-width: 900px) {
+      #loadingBox img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #loadingBox img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+  
+  
+  <script type="module" crossorigin src="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/index-udz5adwh.js"></script>
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/lodash-D5kiaq5p.js">
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/vue-lp4vkCnJ.js">
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/tg-i18n-BPT8eM5q.js">
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/vendor-ChWcuXx4.js">
+  <link rel="modulepreload" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/tracker-Lsz9tc-Y.js">
+  <link rel="stylesheet" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/css/vue-BkIDrq2O.css">
+  <link rel="stylesheet" crossorigin href="https://static.tiangong.cn/prod-skywork-web-bundle/static/css/index-Do6kfjff.css">
+  <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+<link rel="prefetch" href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/index-Bi24ibI_.js" as="script">
+<link rel="prefetch" href="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/index-CBr7jd2P.js" as="script">
+</head>
+
+<body>
+  <script>
+    (function () {
+      try {
+        var time = Date.now();
+        var blob = new Blob(["blob test"], { type: "text/html" });
+        var url = URL.createObjectURL(blob);
+        var iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.src = url;
+        var loaded = false;
+        window.__blob_supported = false;
+        function cleanup() {
+          URL.revokeObjectURL(url);
+          document.body.removeChild(iframe);
+          clearTimeout(timeout);
+        }
+        iframe.onload = () => {
+          loaded = true;
+          cleanup();
+          window.__blob_supported = true;
+          console.log("iframe loaded", Date.now() - time);
+        };
+        document.body.appendChild(iframe);
+        var timeout = setTimeout(() => {
+          if (!loaded) {
+            cleanup();
+            window.__blob_supported = false;
+          }
+        }, 500);
+
+        var time2 = Date.now();
+        var srcDoc = "<div>srcdoc test</div>";
+        var iframe2 = document.createElement("iframe");
+        iframe2.style.display = "none";
+        iframe2.srcdoc = srcDoc;
+        var loaded2 = false;
+        window.__srcdoc_supported = false;
+        function cleanup2() {
+          document.body.removeChild(iframe2);
+          clearTimeout(timeout2);
+        }
+        iframe2.onload = () => {
+          loaded2 = true;
+          cleanup2();
+          window.__srcdoc_supported = true;
+          console.log("iframe loaded2", Date.now() - time2);
+        };
+        document.body.appendChild(iframe2);
+        var timeout2 = setTimeout(() => {
+          if (!loaded2) {
+            cleanup2();
+            window.__srcdoc_supported = false;
+          }
+        }, 500);
+      } catch (e) {
+        console.log(e);
+        window.__blob_supported = false;
+        window.__srcdoc_supported = false;
+      }
+    })();
+  </script>
+  
+  <script>
+      // arms ignore只提供错误的message， 例如: time is not defined
+      // 并没提供错误的堆栈信息，无法定位到浏览器插件的错误文件
+      // 所以在之前拦截错误，阻止事件上报
+      window.addEventListener("error", function (error) {
+        var __error_stack_keywords_path = ["chrome-extension:"];
+        var found = false;
+        for (var i = 0; i < __error_stack_keywords_path.length; i++) {
+          if (error && error.error && error.error.stack && error.error.stack.indexOf(__error_stack_keywords_path[i]) !== -1) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
+          error.stopImmediatePropagation();
+        }
+      });
+      function __isSafariOrIOS() {
+        var userAgent = navigator.userAgent;
+        var isIOS = /iPhone|iPad|iPod/.test(userAgent);
+        var isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(userAgent);
+        return isIOS || isSafari;
+      }
+
+      window.__bl = {
+          config: {
+            pid:"in9gwarca6@fcbe9bb0e7e5810",
+            appType:"web",
+            imgUrl:"https://arms-retcode.aliyuncs.com/r.png?",
+            sendResource:true,
+            enableLinkTrace:true,
+            behavior:true,
+            useFmp:true,
+            enableSPA:true,
+            ignore: {
+              ignoreApis: [
+                function(str) {   // 方法
+                    if (str && str.indexOf('agents_api/abtest/user/ab_exps') >= 0) {
+                        return true;   // 不上报
+                    }
+                    return false;      // 上报
+                },
+              ],
+              ignoreErrors: [
+                function(str) {
+                  // safari/ios fetch错误会导致arms调用t: api 和 t: error上报，触发unhandledrejection
+                  if (str === "Load failed" && __isSafariOrIOS()) {
+                    return true;
+                  }
+                  return false;
+                },
+              ],
+            },
+            autoSendPerf:true,
+            environment:"prod",
+          },
+      };
+  </script>
+  <script type="text/javascript" src="https://retcode.alicdn.com/retcode/bl.js" crossorigin></script>
+  
+    <div id="loadingBox">
+      <img id="loadingImg" src="https://static.tiangong.cn/fe/skywork-site-assets/images/home/loading.gif">
+      <p id="loadingText"></p>
+    </div>
+    <script>
+      const getLanguage = () => {
+        const userPersist = window.localStorage.getItem("userPersist");
+        const lang = JSON.parse(userPersist)?.userSettingConfig?.language;
+        let text = "Loading";
+        if (lang === "zh") {
+          text = "加载中";
+        } else if (lang === "en") {
+          text = "Loading";
+        } else if (lang === "ja") {
+          text = "読み込み中";
+        } else if (lang === "es") {
+          text = "Cargando";
+        } else if (lang === "zh-hant") {
+          text = "加載中";
+        } else if (lang === "ko") {
+          text = "로딩 중";
+        } else if (lang === "de") {
+          text = "Lädt";
+        } else if (lang === "fr") {
+          text = "Chargement";
+        };
+        document.getElementById("loadingText").innerHTML = text;
+      }
+      getLanguage();
+      const getTheme = () => {
+        const themeMode = window.localStorage.getItem("__theme_mode__");
+        let isDark = false;
+        if (themeMode === "1") {
+          isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        } else if (themeMode === "2") {
+          isDark = false;
+        } else if (themeMode === "3") {
+          isDark = true;
+        }
+        return isDark;
+      };
+      document.getElementById("loadingBox").style.backgroundColor = getTheme() ? "#181D24" : "#F7F8FA";
+      document.getElementById("loadingText").style.color = getTheme() ? "#EBEBEB" : "#485568";
+    </script>
+    <div id="app">
+    </div>
+    
+    
+    
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/polyfills-legacy-BbaBWZ3l.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="https://static.tiangong.cn/prod-skywork-web-bundle/static/js/index-legacy-vqSQPhOR.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+
+</html>
